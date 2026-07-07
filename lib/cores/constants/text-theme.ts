@@ -4,7 +4,7 @@ export const textTheme = {
   display2: "text-5xl font-extrabold tracking-tight leading-tight",
 
   // ===== Heading =====
-  heading1: "text-4xl font-bold tracking-tight leading-tight",
+  heading1: "text-4xl tracking-tight leading-tight font-fraunces",
   heading2: "text-3xl font-bold tracking-tight leading-snug",
   heading3: "text-2xl font-bold leading-snug",
 
