@@ -9,12 +9,12 @@ export const textTheme = {
   heading3: "text-2xl font-bold leading-snug",
 
   // ===== Subheading =====
-  subheading1: "text-xl font-semibold leading-snug",
+  subheading1: "text-2xl tracking-tight leading-tight font-fraunces",
   subheading2: "text-lg font-semibold leading-snug",
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
-  body1: "text-lg font-normal leading-relaxed",
+  body1: "text-lg font-normal leading-relaxed text-gray-400",
   body2: "text-base font-normal leading-relaxed",
   body3: "text-sm font-normal leading-relaxed",
 
