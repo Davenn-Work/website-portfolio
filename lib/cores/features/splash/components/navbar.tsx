@@ -22,7 +22,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
             return <div key={index}>{value.text}</div>;
           })}
         </div>
-        <Button className="bg-gray-950 rounded-2xl text-white px-4 py-5">
+        <Button className="bg-gray-950 rounded-2xl text-white px-4 py-5 hidden xl:inline-flex">
           Diskusi Sekarang
         </Button>
       </div>
