@@ -1,11 +1,29 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
+import {
+  Caveat,
+  Fraunces,
+  Geist,
+  Geist_Mono,
+  Inter,
+  Open_Sans,
+  Poppins,
+} from "next/font/google";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+
+const caveat = Caveat({
+  variable: "--font-caveat",
+  subsets: ["latin"],
+});
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
+});
+
+const sans = Open_Sans({
+  variable: "--font-sans",
+  weight: ["300", "400", "500", "600", "700", "800"],
 });
 
 const poppins = Poppins({
@@ -32,7 +50,8 @@ export default function RootLayout({
         "antialiased",
         "font-sans",
         fraunces.variable,
-        poppins.variable,
+        sans.variable,
+        caveat.variable,
       )}
     >
       <body className="min-h-full flex flex-col">{children}</body>

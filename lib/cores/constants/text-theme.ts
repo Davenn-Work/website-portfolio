@@ -7,6 +7,7 @@ export const textTheme = {
   heading1: "text-4xl tracking-tight leading-tight font-fraunces",
   heading2: "text-3xl font-bold tracking-tight leading-snug",
   heading3: "text-2xl font-bold leading-snug",
+  heading4: "text-3xl font-caveat text-secondary leading-tight",
 
   // ===== Subheading =====
   subheading1: "text-2xl tracking-tight leading-tight font-fraunces",
@@ -30,9 +31,6 @@ export const textTheme = {
   button1: "text-base font-semibold leading-none",
   button2: "text-sm font-semibold leading-none",
 
-  // ===== Overline (uppercase kecil, biasa untuk eyebrow/kategori) =====
-  overline: "text-xs font-semibold uppercase tracking-wider leading-none",
-
-  // ===== Link =====
-  link: "text-base font-medium underline underline-offset-2",
+  // Web Icon
+  icon: "text-xl font-fraunces",
 } as const;
