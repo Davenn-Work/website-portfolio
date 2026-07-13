@@ -13,7 +13,7 @@ export type NavbarTypes = {
 
 export default function Navbar({ icons, navItems }: NavbarTypes) {
   return (
-    <div className="w-full fixed py-4 px-8 mx-4 max-w-5xl border border-gray-300 rounded-full shadow-md shadow-gray1 backdrop-blur-md">
+    <div className="w-full fixed py-4 px-8 mx-4 max-w-5xl border border-gray-300 rounded-full shadow-md shadow-gray1 backdrop-blur-md z-20">
       <div className="w-full h-full flex flex-row items-center justify-between">
         <div className="flex justify-between items-center">
           <div className="w-3 h-3 bg-secondary mr-2 rounded-full"></div>

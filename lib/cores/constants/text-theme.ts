@@ -15,8 +15,8 @@ export const textTheme = {
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
-  body1: "text-lg font-normal leading-relaxed text-gray-400",
-  body2: "text-base font-normal leading-relaxed",
+  body1: "text-lg font-normal leading-relaxed text-gray-600",
+  body2: "text-base font-normal leading-relaxed text-gray-600",
   body3: "text-sm font-normal leading-relaxed",
 
   // ===== Label / Form =====

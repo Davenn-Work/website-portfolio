@@ -100,16 +100,21 @@ export default function SplashPage() {
             iconBackgroundColor="#E7F8F0"
           />
         </div>
-        <div className="w-full h-full bg-[#F1EDFB] rounded-xl p-8 mb-8">
-          <h1 className={`${textTheme.heading1} mb-4`}>
-            Empat langkah, tanpa kejutan di tengah jalan.
-          </h1>
-          <p className={`${textTheme.body1} mb-8`}>
-            Kamu akan tahu persis apa yang terjadi di setiap tahap — dan bisa
-            memberi masukan sebelum kami lanjut ke langkah berikutnya.
-          </p>
+        <div className="w-full h-full bg-[#f1edfb] rounded-[48px] px-12 py-20 mb-16">
+          <div className="w-full h-full flex flex-row">
+            <div className="flex-5">
+              <h1 className={`${textTheme.subheading1} mb-4`}>
+                Empat langkah, tanpa kejutan di tengah jalan.
+              </h1>
+              <p className={`${textTheme.body1} mb-8`}>
+                Kamu akan tahu persis apa yang terjadi di setiap tahap — dan
+                bisa memberi masukan sebelum kami lanjut ke langkah berikutnya.
+              </p>
+            </div>
+            <div className="flex-5"></div>
+          </div>
 
-          <div className="relative mt-20">
+          <div className="relative mt-8">
             {/* Vertical Line */}
             <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-indigo-500" />
 
@@ -117,7 +122,7 @@ export default function SplashPage() {
               {steps.map((step, index) => (
                 <div key={step.title} className="relative flex gap-10">
                   {/* Circle */}
-                  <div className="relative z-10 flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[3px] border-indigo-500 bg-white">
+                  <div className="relative flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-[3px] border-indigo-500 bg-[#f1edfb]">
                     <span className="font-fraunces text-3xl font-semibold text-indigo-600">
                       {index + 1}
                     </span>
@@ -125,11 +130,9 @@ export default function SplashPage() {
 
                   {/* Content */}
                   <div className="pb-2">
-                    <h3 className="font-fraunces text-4xl font-semibold text-slate-900">
-                      {step.title}
-                    </h3>
+                    <h3 className={`${textTheme.subheading1}`}>{step.title}</h3>
 
-                    <p className="mt-4 max-w-2xl text-xl leading-9 text-slate-500">
+                    <p className={`mt-4 ${textTheme.body2}`}>
                       {step.description}
                     </p>
                   </div>
@@ -138,19 +141,23 @@ export default function SplashPage() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="w-full h-full bg-primary flex justify-between items-center">
-        <div>
-          <p className={`${textTheme.body1} mb-4`}>Scaleweb</p>
-          <p className={`${textTheme.body1} mb-4`}>
-            Studio desain & pengembangan website untuk bisnis yang ingin
-            dipercaya sejak kunjungan pertama.
-          </p>
-        </div>
-        <div>
-          <p className={`${textTheme.body1} mb-4`}>Hubungi</p>
-          <p className={`${textTheme.body1} mb-4`}>davenn.work@gmail.com</p>
-          <p className={`${textTheme.body1} mb-4`}>+62 811830116</p>
+        <div className="w-full h-full flex flex-row justify-between items-start">
+          <div className="flex-3">
+            <div className="flex items-center mb-4">
+              <div className="w-3 h-3 bg-secondary mr-2 rounded-full"></div>
+              <p className={`${textTheme.icon}`}>Scaleweb</p>
+            </div>
+            <p className={`${textTheme.body1} mb-4`}>
+              Studio desain & pengembangan website untuk bisnis yang ingin
+              dipercaya sejak kunjungan pertama.
+            </p>
+          </div>
+          <div className="w-100"></div>
+          <div>
+            <p className={`${textTheme.body1} mb-4`}>Hubungi</p>
+            <p className={`${textTheme.body1} mb-4`}>davenn.work@gmail.com</p>
+            <p className={`${textTheme.body1} mb-4`}>+62 811830116</p>
+          </div>
         </div>
       </div>
     </div>
