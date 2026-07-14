@@ -1,9 +1,10 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { textTheme } from "@/lib/cores/constants/text-theme";
 import DetailCard from "@/lib/cores/features/splash/components/detail-card";
 import Navbar from "@/lib/cores/features/splash/components/navbar";
 import Image from "next/image";
-import "react-vertical-timeline-component/style.min.css";
 
 const steps = [
   {
@@ -34,23 +35,50 @@ export default function SplashPage() {
       <div className="w-full h-full pt-8 flex flex-col items-center px-8">
         <Navbar
           navItems={[
-            { text: "Layanan", onClick: () => {} },
-            { text: "Proses", onClick: () => {} },
-            { text: "Karya", onClick: () => {} },
+            {
+              text: "Layanan",
+              onClick: () => {
+                document
+                  .getElementById("layanan")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              },
+            },
+            {
+              text: "Proses",
+              onClick: () => {
+                document
+                  .getElementById("proses")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              },
+            },
           ]}
           icons={"Scaleweb"}
+          onDiscuss={() => {
+            document
+              .getElementById("kontak")
+              ?.scrollIntoView({ behavior: "smooth" });
+          }}
         />{" "}
-        <div className="w-full h-full pt-24 pb-16 flex flex-row items-center justify-between">
+        <div
+          id="layanan"
+          className="w-full h-full pt-24 pb-16 flex flex-row items-center justify-between"
+        >
           <section className="flex-5">
-            <p className={`${textTheme.heading4} pb-2`}>
+            <p
+              className={`${textTheme.heading4} pb-2 animate-[fadeIn_1s_ease_forwards]`}
+            >
               Halo, senang bertemu 👋
             </p>
-            <h1 className={`${textTheme.heading1} pb-4`}>
+            <h1
+              className={`${textTheme.heading1} pb-4 animate-[fadeIn_1s_ease_forwards]`}
+            >
               Website yang bikin pengunjung{" "}
               <span className="text-primary italic">percaya</span> sejak detik
               pertama
             </h1>
-            <p className={`${textTheme.body1} pb-4`}>
+            <p
+              className={`${textTheme.body1} pb-4 animate-[fadeIn_1s_ease_forwards]`}
+            >
               Scaleweb membantu bisnis kecil dan menengah punya website yang
               cepat, indah, dan benar-benar mendatangkan pelanggan — bukan cuma
               katalog online yang diam.
@@ -80,7 +108,7 @@ export default function SplashPage() {
           </div>
           <div className="flex-1"></div>
         </div>
-        <div className="w-full max-w-8xl h-full grid grid-cols-3 gap-4 mb-16">
+        <div className="w-full max-w-8xl h-full grid md:grid-cols-3 xss:grid-cols-1 gap-4 mb-16">
           <DetailCard
             title="Desain yang Berkesan"
             description="Setiap website dirancang khusus mengikuti karakter bisnismu, bukan template yang dipakai semua orang."
@@ -100,7 +128,10 @@ export default function SplashPage() {
             iconBackgroundColor="#E7F8F0"
           />
         </div>
-        <div className="w-full h-full bg-[#f1edfb] rounded-[48px] px-12 py-20 mb-16">
+        <div
+          id="proses"
+          className="w-full h-full bg-[#f1edfb] rounded-[48px] px-12 py-20 mb-16"
+        >
           <div className="w-full h-full flex flex-row">
             <div className="flex-5">
               <h1 className={`${textTheme.subheading1} mb-4`}>
@@ -141,7 +172,10 @@ export default function SplashPage() {
             </div>
           </div>
         </div>
-        <div className="w-full h-full flex flex-row justify-between items-start">
+        <div
+          id="kontak"
+          className="w-full h-full flex flex-row justify-between items-start"
+        >
           <div className="flex-3">
             <div className="flex items-center mb-4">
               <div className="w-3 h-3 bg-secondary mr-2 rounded-full"></div>
@@ -154,7 +188,7 @@ export default function SplashPage() {
           </div>
           <div className="w-100"></div>
           <div>
-            <p className={`${textTheme.body1} mb-4`}>Hubungi</p>
+            <p className={`${textTheme.body1} mb-4 font-fraunces`}>Hubungi</p>
             <p className={`${textTheme.body1} mb-4`}>davenn.work@gmail.com</p>
             <p className={`${textTheme.body1} mb-4`}>+62 811830116</p>
           </div>

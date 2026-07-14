@@ -9,9 +9,10 @@ export type NavItems = {
 export type NavbarTypes = {
   icons: String;
   navItems: NavItems[];
+  onDiscuss: () => void;
 };
 
-export default function Navbar({ icons, navItems }: NavbarTypes) {
+export default function Navbar({ icons, navItems, onDiscuss }: NavbarTypes) {
   return (
     <div className="w-full fixed py-4 px-8 mx-4 max-w-5xl border border-gray-300 rounded-full shadow-md shadow-gray1 backdrop-blur-md z-20">
       <div className="w-full h-full flex flex-row items-center justify-between">
@@ -24,6 +25,9 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
             return (
               <div
                 key={index}
+                onClick={() => {
+                  value.onClick!();
+                }}
                 className="group relative cursor-pointer px-4 py-2"
               >
                 <span className="text-gray-500 transition-colors duration-300 group-hover:text-black">
@@ -34,7 +38,10 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
             );
           })}
         </div>
-        <Button className="bg-gray-950 rounded-2xl text-white px-4 py-5 hidden xl:inline-flex duration-300 hover:-translate-y-1">
+        <Button
+          onClick={() => onDiscuss()}
+          className="bg-gray-950 rounded-2xl text-white px-4 py-5 hidden xl:inline-flex duration-300 hover:-translate-y-1"
+        >
           Diskusi Sekarang
         </Button>
       </div>
