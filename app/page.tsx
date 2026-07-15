@@ -7,6 +7,12 @@ import Navbar from "@/lib/cores/features/splash/components/navbar";
 import Image from "next/image";
 import PriceCard from "@/lib/cores/features/splash/components/price-card";
 import { Rocket, Star } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const steps = [
   {
@@ -215,7 +221,45 @@ export default function SplashPage() {
             ></PriceCard>
           </div>
         </div>
-        <div className="w-full h-full grid grid-cols-1 gap-4"></div>
+        <div className="w-full h-full flex flex-col items-center justify-center">
+          <h1 className={`${textTheme.subheading1} mb-8`}>FAQ</h1>
+          <div className="w-full h-full grid grid-cols-1 gap-4 max-w-4xl mb-4">
+            <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+              <AccordionItem
+                value="item-1"
+                className="bg-white rounded-xl border border-gray-300 px-4"
+              >
+                <AccordionTrigger
+                  className={`${textTheme.body2} flex items-center justify-between hover:no-underline`}
+                >
+                  Bagaimana Skema Pembayaran?
+                </AccordionTrigger>
+                <AccordionContent className={`${textTheme.body1}`}>
+                  50% di awal sebagai tanda jadi, 50% sisanya setelah website
+                  selesai diuji dan siap tayang.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+          <div className="w-full h-full grid grid-cols-1 gap-4 max-w-4xl mb-4">
+            <Accordion type="single" collapsible className="max-w-2xl mx-auto">
+              <AccordionItem
+                value="item-1"
+                className="bg-white rounded-xl border border-gray-300 px-4"
+              >
+                <AccordionTrigger
+                  className={`${textTheme.body2} flex items-center justify-between hover:no-underline`}
+                >
+                  Apakah ada garansi setelah website tayang?
+                </AccordionTrigger>
+                <AccordionContent className={`${textTheme.body1}`}>
+                  Ada pendampingan gratis 30 hari untuk perbaikan bug atau
+                  penyesuaian kecil setelah website diluncurkan.
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
+          </div>
+        </div>
         <div
           id="kontak"
           className="w-full h-full flex flex-row justify-between items-start"

@@ -17,7 +17,7 @@ export const textTheme = {
 
   // ===== Body =====
   body1: "text-lg font-normal leading-relaxed text-gray-600",
-  body2: "text-base font-normal leading-relaxed text-gray-600",
+  body2: "text-lg font-normal leading-relaxed text-black font-fraunces",
   body3: "text-sm font-normal leading-relaxed",
 
   // ===== Label / Form =====
