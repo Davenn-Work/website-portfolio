@@ -5,6 +5,8 @@ import { textTheme } from "@/lib/cores/constants/text-theme";
 import DetailCard from "@/lib/cores/features/splash/components/detail-card";
 import Navbar from "@/lib/cores/features/splash/components/navbar";
 import Image from "next/image";
+import PriceCard from "@/lib/cores/features/splash/components/price-card";
+import { Rocket, Star } from "lucide-react";
 
 const steps = [
   {
@@ -48,6 +50,14 @@ export default function SplashPage() {
               onClick: () => {
                 document
                   .getElementById("proses")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              },
+            },
+            {
+              text: "Harga",
+              onClick: () => {
+                document
+                  .getElementById("price")
                   ?.scrollIntoView({ behavior: "smooth" });
               },
             },
@@ -172,6 +182,40 @@ export default function SplashPage() {
             </div>
           </div>
         </div>
+        <div
+          id="price"
+          className="w-full h-full flex flex-col justify-center items-center mb-16"
+        >
+          <h1 className={`${textTheme.subheading1} mb-4`}>Harga Paket</h1>
+          <p className={`${textTheme.body1} mb-8`}>
+            Kami menyediakan paket-paket untuk memenuhi kebutuhan anda
+          </p>
+          <div className="w-full h-full grid grid-cols-2 gap-4 max-w-4xl">
+            <PriceCard
+              Icon={Rocket}
+              name="Basic"
+              price="Rp.150 Ribu"
+              description=""
+              features={[
+                "Durasi pengerjaan 3 hari",
+                "Jumlah Revisi 2 kali",
+                "Belum termasuk domain/ hosting website",
+              ]}
+            ></PriceCard>
+            <PriceCard
+              Icon={Star}
+              name="Plus"
+              price="Rp.450 Ribu"
+              description=""
+              features={[
+                "Durasi pengerjaan 5 hari",
+                "Jumlah Revisi 3 kali",
+                "Sudah termasuk domain/ hosting website",
+              ]}
+            ></PriceCard>
+          </div>
+        </div>
+        <div className="w-full h-full grid grid-cols-1 gap-4"></div>
         <div
           id="kontak"
           className="w-full h-full flex flex-row justify-between items-start"

@@ -11,7 +11,8 @@ export const textTheme = {
 
   // ===== Subheading =====
   subheading1: "text-2xl tracking-tight leading-tight font-fraunces",
-  subheading2: "text-lg font-semibold leading-snug",
+  subheading2:
+    "text-2xl tracking-tight leading-tight font-fraunces font-semibold",
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
