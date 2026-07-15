@@ -30,7 +30,7 @@ export default function PriceCard({
 
       {features.map((value, index) => {
         return (
-          <div className="w-full h-full flex flex-row">
+          <div key={value} className="w-full h-full flex flex-row">
             <Check color="#1D9E75" className="mr-2" />
             <p>{value}</p>
           </div>
