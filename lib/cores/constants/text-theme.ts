@@ -11,12 +11,13 @@ export const textTheme = {
 
   // ===== Subheading =====
   subheading1: "text-2xl tracking-tight leading-tight font-fraunces",
-  subheading2: "text-lg font-semibold leading-snug",
+  subheading2:
+    "text-2xl tracking-tight leading-tight font-fraunces font-semibold",
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
   body1: "text-lg font-normal leading-relaxed text-gray-600",
-  body2: "text-base font-normal leading-relaxed text-gray-600",
+  body2: "text-lg font-normal leading-relaxed text-black font-fraunces",
   body3: "text-sm font-normal leading-relaxed",
 
   // ===== Label / Form =====
