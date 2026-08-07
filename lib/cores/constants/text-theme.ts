@@ -4,20 +4,22 @@ export const textTheme = {
   display2: "text-5xl font-extrabold tracking-tight leading-tight",
 
   // ===== Heading =====
-  heading1: "text-4xl tracking-tight leading-tight font-fraunces",
+  heading1: "text-3xl sm:text-4xl tracking-tight leading-tight font-fraunces ",
   heading2: "text-3xl font-bold tracking-tight leading-snug",
   heading3: "text-2xl font-bold leading-snug",
   heading4: "text-3xl font-caveat text-secondary leading-tight",
 
   // ===== Subheading =====
-  subheading1: "text-2xl tracking-tight leading-tight font-fraunces",
+  subheading1:
+    "text-2xl sm:text-3xl tracking-tight leading-tight font-fraunces",
   subheading2:
     "text-2xl tracking-tight leading-tight font-fraunces font-semibold",
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
-  body1: "text-lg font-normal leading-relaxed text-gray-600",
-  body2: "text-lg font-normal leading-relaxed text-black font-fraunces",
+  body1: "text-md sm:text-lg font-normal leading-relaxed text-gray-600",
+  body2:
+    "text-md sm:text-lg font-normal leading-relaxed text-black font-fraunces",
   body3: "text-sm font-normal leading-relaxed",
 
   // ===== Label / Form =====
