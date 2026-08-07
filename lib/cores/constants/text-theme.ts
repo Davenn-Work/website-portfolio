@@ -4,20 +4,24 @@ export const textTheme = {
   display2: "text-5xl font-extrabold tracking-tight leading-tight",
 
   // ===== Heading =====
-  heading1: "text-4xl tracking-tight leading-tight font-fraunces",
+  heading1:
+    "text-3xl sm:text-4xl xl:text-6xl tracking-tight leading-tight font-fraunces ",
   heading2: "text-3xl font-bold tracking-tight leading-snug",
   heading3: "text-2xl font-bold leading-snug",
   heading4: "text-3xl font-caveat text-secondary leading-tight",
 
   // ===== Subheading =====
-  subheading1: "text-2xl tracking-tight leading-tight font-fraunces",
+  subheading1:
+    "text-2xl sm:text-3xl xl:text-4xl tracking-tight leading-tight font-fraunces",
   subheading2:
-    "text-2xl tracking-tight leading-tight font-fraunces font-semibold",
+    "text-xl sm:text-2xl sm:text-3xl tracking-tight leading-tight font-fraunces font-semibold",
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
-  body1: "text-lg font-normal leading-relaxed text-gray-600",
-  body2: "text-lg font-normal leading-relaxed text-black font-fraunces",
+  body1:
+    "text-md sm:text-lg xl:text-2xl font-normal leading-relaxed text-gray-600",
+  body2:
+    "text-md sm:text-lg font-normal leading-relaxed text-black font-fraunces",
   body3: "text-sm font-normal leading-relaxed",
 
   // ===== Label / Form =====
@@ -29,9 +33,11 @@ export const textTheme = {
   caption2: "text-[11px] font-normal leading-normal tracking-wide",
 
   // ===== Button text =====
-  button1: "text-base font-semibold leading-none",
+  button: "text-md xl:text-2xl font-semibold leading-none",
   button2: "text-sm font-semibold leading-none",
 
   // Web Icon
   icon: "text-xl font-fraunces",
+
+  footer: "text-md sm:text-lg font-normal leading-relaxed text-gray-600",
 } as const;
