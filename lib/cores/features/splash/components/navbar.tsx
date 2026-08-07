@@ -20,7 +20,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
 
   return (
     <div className="fixed left-1/2 top-4 z-20 w-[calc(100%-2rem)] max-w-5xl -translate-x-1/2">
-      <div className="relative rounded-full border border-gray-300 bg-white/80 px-4 py-4 shadow-md shadow-gray1 backdrop-blur-md">
+      <div className="relative rounded-full border border-gray-300 bg-white/80 px-8 py-4 shadow-md shadow-gray1 backdrop-blur-md">
         <div className="flex w-full items-center justify-between gap-3">
           <div className="flex items-center">
             <div className="mr-2 h-3 w-3 rounded-full bg-secondary"></div>

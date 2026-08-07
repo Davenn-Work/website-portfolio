@@ -13,7 +13,7 @@ export const textTheme = {
   subheading1:
     "text-2xl sm:text-3xl tracking-tight leading-tight font-fraunces",
   subheading2:
-    "text-2xl tracking-tight leading-tight font-fraunces font-semibold",
+    "text-xl sm:text-2xl tracking-tight leading-tight font-fraunces font-semibold",
   subheading3: "text-base font-semibold leading-normal",
 
   // ===== Body =====
