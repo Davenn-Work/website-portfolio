@@ -98,7 +98,7 @@ export default function SplashClient() {
           </p>
           <Button
             onClick={() => document.getElementById("kontak")?.scrollIntoView()}
-            className="rounded-2xl bg-gray-950 px-4 py-5 text-white duration-300 hover:-translate-y-1"
+            className={`${textTheme.button} xl:py-8 xl:px-8 rounded-2xl bg-gray-950 px-4 py-5 text-white duration-300 hover:-translate-y-1`}
           >
             Diskusi Sekarang
           </Button>
@@ -221,20 +221,20 @@ export default function SplashClient() {
               <div className="w-3 h-3 bg-secondary mr-2 rounded-full"></div>
               <p className={`${textTheme.icon} text-white`}>Scaleweb</p>
             </div>
-            <p className={`${textTheme.body1} text-white mb-4`}>
+            <p className={`${textTheme.footer} text-white mb-4`}>
               Studio desain & pengembangan website untuk bisnis yang ingin
               dipercaya sejak kunjungan pertama.
             </p>
           </div>
           <div className="w-100"></div>
           <div>
-            <p className={`${textTheme.body1} text-white mb-4 font-fraunces`}>
+            <p className={`${textTheme.footer} text-white mb-4 font-fraunces`}>
               Hubungi
             </p>
-            <p className={`${textTheme.body1} text-white mb-4`}>
+            <p className={`${textTheme.footer} text-white mb-4`}>
               davenn.work@gmail.com
             </p>
-            <p className={`${textTheme.body1} text-white mb-4`}>
+            <p className={`${textTheme.footer} text-white mb-4`}>
               +62 811830116
             </p>
           </div>
