@@ -28,7 +28,7 @@ export default function PriceCard({
 
       <hr className="border-gray-300 my-8" />
 
-      {features.map((value, index) => {
+      {features.map((value) => {
         return (
           <div key={value} className="w-full flex items-start gap-2">
             <Check
