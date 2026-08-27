@@ -28,10 +28,10 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
               .getElementById("hero")
               ?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="flex items-center gap-2 text-left"
+          className="flex items-center gap-4 text-left"
         >
-          <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-          <span className={`${textTheme.subheading3} text-foreground sm:text-base`}>
+          <span className="h-3 w-3 rounded-full bg-primary" />
+          <span className={`${textTheme.subheading1} text-foreground`}>
             {icons}
           </span>
         </button>
@@ -44,7 +44,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
               onClick={() => {
                 value.onClick?.();
               }}
-              className={`rounded-full px-4 py-2 ${textTheme.label2} text-foreground`}
+              className={`rounded-full px-4 py-2 ${textTheme.label2} text-gray-700 hover:text-primary hover:font-semibold`}
             >
               {value.text}
             </button>
@@ -54,7 +54,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
         <div className="flex items-center gap-2">
           <Button
             type="button"
-            className={`hidden rounded-full px-5 shadow-none md:inline-flex ${textTheme.button1}`}
+            className={`hidden px-8 shadow-none md:inline-flex ${textTheme.button1}`}
             onClick={() => {
               document
                 .getElementById("kontak")
