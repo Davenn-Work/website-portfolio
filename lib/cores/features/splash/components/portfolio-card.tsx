@@ -1,5 +1,6 @@
 import type { PortfolioCardData } from "@/lib/cores/features/splash/content";
 import { ArrowUpRight } from "lucide-react";
+import { textTheme } from "@/lib/cores/constants/text-theme";
 
 export default function PortfolioCard({
   title,
@@ -49,7 +50,7 @@ export default function PortfolioCard({
                 }
               />
             </div>
-            <span className="text-xs uppercase tracking-widest text-muted-foreground">
+            <span className={`${textTheme.caption1} text-muted-foreground`}>
               Preview
             </span>
           </div>
@@ -126,8 +127,8 @@ export default function PortfolioCard({
 
       <div className="mt-5 flex items-start justify-between gap-4">
         <div>
-          <h3 className="text-xl font-medium tracking-tight text-foreground">{title}</h3>
-          <p className="mt-1 text-sm text-muted-foreground">{description}</p>
+          <h3 className={`${textTheme.subheading3} text-foreground`}>{title}</h3>
+          <p className={`mt-1 ${textTheme.body2} text-muted-foreground`}>{description}</p>
         </div>
         <ArrowUpRight className="mt-1 size-5 shrink-0 text-primary transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
       </div>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { textTheme } from "@/lib/cores/constants/text-theme";
 import { Menu, X } from "lucide-react";
 
 export type NavItems = {
@@ -30,7 +31,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
           className="flex items-center gap-2 text-left"
         >
           <span className="h-2.5 w-2.5 rounded-full bg-primary" />
-          <span className="text-sm font-medium tracking-tight text-foreground sm:text-base">
+          <span className={`${textTheme.subheading3} text-foreground sm:text-base`}>
             {icons}
           </span>
         </button>
@@ -43,7 +44,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
               onClick={() => {
                 value.onClick?.();
               }}
-              className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors duration-200 hover:bg-foreground/5 hover:text-foreground"
+              className={`rounded-full px-4 py-2 ${textTheme.label2} text-foreground`}
             >
               {value.text}
             </button>
@@ -53,7 +54,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
         <div className="flex items-center gap-2">
           <Button
             type="button"
-            className="hidden rounded-full px-5 text-sm font-medium shadow-none md:inline-flex"
+            className={`hidden rounded-full px-5 shadow-none md:inline-flex ${textTheme.button1}`}
             onClick={() => {
               document
                 .getElementById("kontak")
@@ -91,7 +92,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
                 value.onClick?.();
                 setIsOpen(false);
               }}
-              className="rounded-2xl px-4 py-3 text-left text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
+              className={`rounded-2xl px-4 py-3 text-left ${textTheme.label2} text-foreground`}
             >
               {value.text}
             </button>

@@ -1125,3 +1125,12 @@ The goal is to produce code that is:
 **Visually consistent**
 
 **Easy to extend**
+
+## 41. Use Text Theme for Reusability
+
+When implementing style for text
+
+- Use existing text style that is defined in constants/text-theme.ts
+- Dont specify specific variable for a text-theme style. Example, hero-title, title, nav-text -> don't, heading1, subheading1, body1, button -> do
+- Eliminate unused text-theme
+- If there is a new style that is not defined, feel free to add the style in text-theme

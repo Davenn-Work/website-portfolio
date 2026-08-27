@@ -21,8 +21,8 @@ export default function DetailCard({
       >
         {icon}
       </div>
-      <h1 className={`mb-4 ${textTheme.subheading1}`}>{title}</h1>
-      <p className={`${textTheme.body1}`}>{description}</p>
+      <h1 className={`mb-4 ${textTheme.subheading1} text-foreground`}>{title}</h1>
+      <p className={`${textTheme.body1} text-muted-foreground`}>{description}</p>
     </div>
   );
 }

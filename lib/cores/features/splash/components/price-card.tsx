@@ -21,10 +21,10 @@ export default function PriceCard({
       <div>
         <Icon className="mb-4" color="black" size={24} />
       </div>
-      <h1 className={`${textTheme.subheading1}`}>{name}</h1>
-      <p className={`${textTheme.body1} mb-4`}>{description}</p>
+      <h1 className={`${textTheme.subheading1} text-foreground`}>{name}</h1>
+      <p className={`${textTheme.body1} mb-4 text-muted-foreground`}>{description}</p>
 
-      <h1 className={`${textTheme.subheading2} whitespace-nowrap`}>{price}</h1>
+      <h1 className={`${textTheme.subheading2} whitespace-nowrap text-foreground`}>{price}</h1>
 
       <hr className="border-gray-300 my-8" />
 
@@ -36,7 +36,7 @@ export default function PriceCard({
               className="h-5 w-5 shrink-0 mt-1"
               strokeWidth={2.5}
             />
-            <p className="flex-1 leading-relaxed">{value}</p>
+            <p className={`flex-1 ${textTheme.body2} leading-relaxed text-foreground`}>{value}</p>
           </div>
         );
       })}

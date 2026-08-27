@@ -1,43 +1,21 @@
 export const textTheme = {
-  // ===== Display (untuk hero section / landing) =====
-  display1: "text-6xl font-extrabold tracking-tight leading-tight",
-  display2: "text-5xl font-extrabold tracking-tight leading-tight",
+  heading1: "text-5xl font-semibold leading-none tracking-tight sm:text-6xl lg:text-7xl",
+  heading2: "text-4xl font-semibold leading-none tracking-tight sm:text-5xl lg:text-6xl",
+  heading3: "text-3xl font-semibold leading-tight",
 
-  // ===== Heading =====
-  heading1:
-    "text-3xl sm:text-4xl xl:text-6xl tracking-tight leading-tight font-fraunces ",
-  heading2: "text-3xl font-bold tracking-tight leading-snug",
-  heading3: "text-2xl font-bold leading-snug",
-  heading4: "text-3xl font-caveat text-secondary leading-tight",
+  subheading1: "text-2xl font-semibold tracking-tight",
+  subheading2: "text-xl font-semibold tracking-tight",
+  subheading3: "text-lg font-semibold tracking-tight",
 
-  // ===== Subheading =====
-  subheading1:
-    "text-2xl sm:text-3xl xl:text-4xl tracking-tight leading-tight font-fraunces",
-  subheading2:
-    "text-xl sm:text-2xl sm:text-3xl tracking-tight leading-tight font-fraunces font-semibold",
-  subheading3: "text-base font-semibold leading-normal",
+  body1: "text-base leading-8",
+  body2: "text-sm leading-7",
 
-  // ===== Body =====
-  body1:
-    "text-md sm:text-lg xl:text-2xl font-normal leading-relaxed text-gray-600",
-  body2:
-    "text-md sm:text-lg font-normal leading-relaxed text-black font-fraunces",
-  body3: "text-sm font-normal leading-relaxed",
+  label1: "text-xs font-semibold uppercase tracking-widest",
+  label2: "text-sm font-medium tracking-tight",
 
-  // ===== Label / Form =====
-  label1: "text-sm font-medium leading-normal",
-  label2: "text-xs font-medium leading-normal",
+  caption1: "text-xs uppercase tracking-widest",
+  caption2: "text-[11px] uppercase tracking-[0.2em]",
 
-  // ===== Caption / Helper =====
-  caption1: "text-xs font-normal leading-normal",
-  caption2: "text-[11px] font-normal leading-normal tracking-wide",
-
-  // ===== Button text =====
-  button: "text-md xl:text-2xl font-semibold leading-none",
-  button2: "text-sm font-semibold leading-none",
-
-  // Web Icon
-  icon: "text-xl font-fraunces",
-
-  footer: "text-md sm:text-lg font-normal leading-relaxed text-gray-600",
+  button1: "text-sm font-medium",
+  button2: "text-xs font-medium",
 } as const;

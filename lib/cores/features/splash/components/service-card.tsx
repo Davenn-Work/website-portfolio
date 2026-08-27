@@ -1,4 +1,5 @@
 import type { ServiceCardData } from "@/lib/cores/features/splash/content";
+import { textTheme } from "@/lib/cores/constants/text-theme";
 
 export default function ServiceCard({ title, description, icon }: ServiceCardData) {
   return (
@@ -6,10 +7,10 @@ export default function ServiceCard({ title, description, icon }: ServiceCardDat
       <div className="flex h-10 w-10 items-center justify-center rounded-2xl bg-primary/10">
         {icon}
       </div>
-      <h3 className="mt-5 text-lg font-semibold tracking-tight text-foreground">
+      <h3 className={`mt-5 ${textTheme.subheading3} text-foreground`}>
         {title}
       </h3>
-      <p className="mt-3 text-sm leading-7 text-muted-foreground">{description}</p>
+      <p className={`mt-3 ${textTheme.body2} text-muted-foreground`}>{description}</p>
     </article>
   );
 }
