@@ -44,7 +44,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
               onClick={() => {
                 value.onClick?.();
               }}
-              className={`rounded-full px-4 py-2 ${textTheme.label2} text-gray-700 hover:text-primary hover:font-semibold`}
+              className={`rounded-full px-4 py-2 ${textTheme.label2} text-muted-foreground transition-colors hover:text-foreground`}
             >
               {value.text}
             </button>

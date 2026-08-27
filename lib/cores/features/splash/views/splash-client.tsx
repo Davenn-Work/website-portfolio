@@ -5,6 +5,8 @@ import HeroSection from "@/lib/cores/features/splash/components/hero-section";
 import ValuePropositionSection from "@/lib/cores/features/splash/components/value-proposition-section";
 import PortfolioSection from "@/lib/cores/features/splash/components/portfolio-section";
 import ServicesSection from "@/lib/cores/features/splash/components/services-section";
+import ProcessSection from "@/lib/cores/features/splash/components/process-section";
+import PricingSection from "@/lib/cores/features/splash/components/pricing-section";
 import SiteFooter from "@/lib/cores/features/splash/components/site-footer";
 import type { NavItem } from "@/lib/cores/features/splash/content";
 
@@ -28,7 +30,15 @@ const navItems: NavItem[] = [
   {
     text: "Proses",
     onClick: () => {
-      document.getElementById("proses")?.scrollIntoView({ behavior: "smooth" });
+      document
+        .getElementById("proses-kerja")
+        ?.scrollIntoView({ behavior: "smooth" });
+    },
+  },
+  {
+    text: "Harga",
+    onClick: () => {
+      document.getElementById("harga")?.scrollIntoView({ behavior: "smooth" });
     },
   },
   {
@@ -48,6 +58,8 @@ export default function SplashClient() {
         <ValuePropositionSection />
         <PortfolioSection />
         <ServicesSection />
+        <ProcessSection />
+        <PricingSection />
       </main>
       <SiteFooter navItems={navItems} />
     </div>

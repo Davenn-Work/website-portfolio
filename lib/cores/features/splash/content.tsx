@@ -32,6 +32,21 @@ export type ServiceCardData = {
   icon: ReactNode;
 };
 
+export type ProcessStepData = {
+  step: string;
+  title: string;
+  description: string;
+};
+
+export type PricingCardData = {
+  name: string;
+  description: string;
+  price: string;
+  features: string[];
+  featured?: boolean;
+  badge?: string;
+};
+
 export const valueCards: ValueCardData[] = [
   {
     id: "01",
@@ -105,5 +120,60 @@ export const serviceCards: ServiceCardData[] = [
     description:
       "Penyempurnaan performa, struktur, dan aksesibilitas agar pengalaman pengguna terasa lebih mulus.",
     icon: <Wand2 className="size-4 text-primary" />,
+  },
+];
+
+export const processSteps: ProcessStepData[] = [
+  {
+    step: "01",
+    title: "Discovery",
+    description:
+      "Kami menyimak kebutuhan, memahami audiens, dan merumuskan arah yang paling sesuai untuk project Anda.",
+  },
+  {
+    step: "02",
+    title: "Design",
+    description:
+      "Struktur visual disusun jadi konsep yang rapi, jelas, dan mudah dikembangkan ke tahap berikutnya.",
+  },
+  {
+    step: "03",
+    title: "Development",
+    description:
+      "Desain diterjemahkan ke implementasi yang responsif, optimal, dan siap dipakai di berbagai perangkat.",
+  },
+  {
+    step: "04",
+    title: "Launch",
+    description:
+      "Kami memastikan performa, detail akhir, dan peluncuran berjalan mulus tanpa mengorbankan kualitas.",
+  },
+];
+
+export const pricingCards: PricingCardData[] = [
+  {
+    name: "Esensial",
+    description:
+      "Cocok untuk startup dan bisnis kecil yang membutuhkan website profesional lebih cepat.",
+    price: "Mulai Rp 15 Jt",
+    features: [
+      "Desain Landing Page",
+      "Pengembangan Frontend Dasar",
+      "Responsif Mobile",
+    ],
+  },
+  {
+    name: "Profesional",
+    description:
+      "Solusi lengkap untuk perusahaan yang membutuhkan platform digital lebih komprehensif.",
+    price: "Mulai Rp 45 Jt",
+    features: [
+      "Full UX/UI Design System",
+      "Full-stack Web App Development",
+      "Integrasi CMS & API",
+      "3 Bulan Maintenance",
+    ],
+    featured: true,
+    badge: "Populer",
   },
 ];
