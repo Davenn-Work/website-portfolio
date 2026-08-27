@@ -16,10 +16,8 @@ export default function PriceCard({
   return (
     <article
       className={[
-        "flex flex-col rounded-3xl border p-6 sm:p-8",
-        featured
-          ? "border-primary/30 bg-primary/5"
-          : "border-border bg-card",
+        "flex flex-col border p-6 sm:p-8",
+        featured ? "border-primary/30 bg-primary/5" : "border-border bg-card",
       ].join(" ")}
     >
       <div className="flex items-start justify-between gap-4">
@@ -53,7 +51,7 @@ export default function PriceCard({
 
       <ul className="grid gap-3">
         {features.map((value) => (
-          <li key={value} className="flex items-start gap-3">
+          <li key={value} className="flex items-center gap-3">
             <Check
               className="mt-0.5 size-4 shrink-0 text-primary"
               strokeWidth={2.5}
@@ -62,14 +60,6 @@ export default function PriceCard({
           </li>
         ))}
       </ul>
-
-      <Button
-        type="button"
-        variant={featured ? "default" : "outline"}
-        className={`mt-8 w-full rounded-xl px-6 ${textTheme.button1}`}
-      >
-        Pilih Paket
-      </Button>
     </article>
   );
 }
