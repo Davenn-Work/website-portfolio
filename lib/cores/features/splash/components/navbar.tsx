@@ -23,7 +23,9 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
         <button
           type="button"
           onClick={() => {
-            document.getElementById("hero")?.scrollIntoView({ behavior: "smooth" });
+            document
+              .getElementById("hero")
+              ?.scrollIntoView({ behavior: "smooth" });
           }}
           className="flex items-center gap-2 text-left"
         >
@@ -53,7 +55,9 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
             type="button"
             className="hidden rounded-full px-5 text-sm font-medium shadow-none md:inline-flex"
             onClick={() => {
-              document.getElementById("kontak")?.scrollIntoView({ behavior: "smooth" });
+              document
+                .getElementById("kontak")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Mulai Proyek
@@ -96,7 +100,9 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
             type="button"
             className="mt-2 rounded-full"
             onClick={() => {
-              document.getElementById("kontak")?.scrollIntoView({ behavior: "smooth" });
+              document
+                .getElementById("kontak")
+                ?.scrollIntoView({ behavior: "smooth" });
               setIsOpen(false);
             }}
           >
