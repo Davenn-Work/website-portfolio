@@ -1,45 +1,65 @@
+import { Button } from "@/components/ui/button";
 import { textTheme } from "@/lib/cores/constants/text-theme";
-import { Check, LucideIcon } from "lucide-react";
+import type { PricingCardData } from "@/lib/cores/features/splash/content";
+import { Check } from "lucide-react";
 
-export type PriceCardType = {
-  name: string;
-  description: string;
-  Icon: LucideIcon;
-  price: string;
-  features: string[];
-};
+type PriceCardProps = PricingCardData;
 
 export default function PriceCard({
   name,
+  description,
   price,
   features,
-  description,
-  Icon,
-}: PriceCardType) {
+  featured = false,
+  badge,
+}: PriceCardProps) {
   return (
-    <div className="flex flex-col p-8 bg-white border border-gray-300 rounded-xl transform duration-300 hover:-translate-y-2 shadow-gray1 hover:shadow-sm">
-      <div>
-        <Icon className="mb-4" color="black" size={24} />
+    <article
+      className={[
+        "flex flex-col border p-6 sm:p-8",
+        featured ? "border-primary/30 bg-primary/5" : "border-border bg-card",
+      ].join(" ")}
+    >
+      <div className="flex items-start justify-between gap-4">
+        <div>
+          <h3 className={`${textTheme.subheading2} text-foreground`}>{name}</h3>
+          <p className={`mt-3 ${textTheme.body2} text-muted-foreground`}>
+            {description}
+          </p>
+        </div>
+
+        {badge ? (
+          <span
+            className={`rounded-full bg-primary px-3 py-1 ${textTheme.caption2} text-primary-foreground`}
+          >
+            {badge}
+          </span>
+        ) : null}
       </div>
-      <h1 className={`${textTheme.subheading1}`}>{name}</h1>
-      <p className={`${textTheme.body1} mb-4`}>{description}</p>
 
-      <h1 className={`${textTheme.subheading2} whitespace-nowrap`}>{price}</h1>
+      <p
+        className={[
+          "mt-6",
+          textTheme.heading3,
+          featured ? "text-primary" : "text-foreground",
+        ].join(" ")}
+      >
+        {price}
+      </p>
 
-      <hr className="border-gray-300 my-8" />
+      <hr className="my-6 border-border" />
 
-      {features.map((value, index) => {
-        return (
-          <div key={value} className="w-full flex items-start gap-2">
+      <ul className="grid gap-3">
+        {features.map((value) => (
+          <li key={value} className="flex items-center gap-3">
             <Check
-              color="#1D9E75"
-              className="h-5 w-5 shrink-0 mt-1"
+              className="mt-0.5 size-4 shrink-0 text-primary"
               strokeWidth={2.5}
             />
-            <p className="flex-1 leading-relaxed">{value}</p>
-          </div>
-        );
-      })}
-    </div>
+            <p className={`${textTheme.body2} text-foreground`}>{value}</p>
+          </li>
+        ))}
+      </ul>
+    </article>
   );
 }

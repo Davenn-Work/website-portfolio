@@ -6,18 +6,38 @@
 
 :root {
   /* Base */
+  --font-sans:
+    system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-fraunces: var(--font-sans);
+  --font-poppins: var(--font-sans);
+  --font-caveat: var(--font-sans);
+  --background: #fafafa;
+  --foreground: #111111;
+  --card: #ffffff;
+  --card-foreground: #111111;
+  --popover: #ffffff;
+  --popover-foreground: #111111;
+  --primary: #635bff;
+  --primary-foreground: #ffffff;
+  --secondary: #f4f4f5;
+  --secondary-foreground: #111111;
+  --muted: #f4f4f5;
+  --muted-foreground: #666666;
+  --accent: #635bff;
+  --accent-foreground: #ffffff;
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #635bff;
 
   /* Surface / Card */
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
+  --surface: #ffffff;
+  --surface-strong: #111111;
+  --surface-soft: #f4f4f5;
+  --brand-soft: #f1edfb;
 
   /* Brand */
-  --primary: #5b4cc4;
   --primary-dark: #453998;
   --primary-light: #f1edfb;
-  --secondary: #ff6f59;
   --mint: #2fbf8f;
 
   /* Status */
@@ -31,6 +51,7 @@
   --info-foreground: #ffffff;
 
   /* Gray scale */
+  --radius: 0.625rem;
   --gray-50: #fafafa;
   --gray-100: #f4f4f5;
   --gray-200: #e4e4e7;
@@ -42,10 +63,6 @@
   --gray-800: #27272a;
   --gray-900: #1c1b29;
   --gray-950: #09090b;
-
-  --radius: 0.625rem;
-
-  --background: #fbf9ff;
 
   --white1: #ffffff;
   --white2: #f1edfb;
@@ -124,6 +141,10 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-surface: var(--surface);
+  --color-surface-strong: var(--surface-strong);
+  --color-surface-soft: var(--surface-soft);
+  --color-brand-soft: var(--brand-soft);
 
   --color-success: var(--success);
   --color-success-foreground: var(--success-foreground);
@@ -220,6 +241,11 @@
 
 body {
   font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
+.vertical-timeline::before {
+  width: 1px;
 }
 
 @layer base {

@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import SplashClient from "@/lib/cores/features/splash/views/splash-client";
 
 export const metadata: Metadata = {
-  title: "Scaleweb - Jasa Pembuatan Website Professional",
+  title: "Scaleweb",
   description:
-    "Menyediakan jasa pembuatan website company profile, UMKM, landing page, dan dashboard.",
+    "Website jasa pembuatan website yang berkesan, nyaman digunakan, dan berorientasi pada hasil.",
 };
 
 export default function SplashPage() {
