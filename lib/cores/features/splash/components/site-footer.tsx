@@ -21,10 +21,10 @@ export default function SiteFooter({ navItems }: SiteFooterProps) {
         </div>
 
         <div>
-          <p className={`text-background/45 ${textTheme.caption1}`}>
-            Navigasi
-          </p>
-          <div className={`mt-5 grid gap-3 ${textTheme.body2} text-background/70`}>
+          <p className={`text-background/45 ${textTheme.caption1}`}>Navigasi</p>
+          <div
+            className={`mt-5 grid gap-3 ${textTheme.body2} text-background/70`}
+          >
             {navItems.map((item) => (
               <button
                 key={item.text}
@@ -39,12 +39,12 @@ export default function SiteFooter({ navItems }: SiteFooterProps) {
         </div>
 
         <div>
-          <p className={`text-background/45 ${textTheme.caption1}`}>
-            Kontak
-          </p>
-          <div className={`mt-5 space-y-3 ${textTheme.body2} text-background/70`}>
-            <p>halo@studiodigital.co</p>
-            <p>+62 812 3456 7890</p>
+          <p className={`text-background/45 ${textTheme.caption1}`}>Kontak</p>
+          <div
+            className={`mt-5 space-y-3 ${textTheme.body2} text-background/70`}
+          >
+            <p>davenn.work@gmail.com</p>
+            <p>+62 811 830 116</p>
             <p>Jakarta, Indonesia</p>
           </div>
         </div>
