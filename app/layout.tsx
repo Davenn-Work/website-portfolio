@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Studio Digital",
-  description: "Website jasa pembuatan website yang berkesan, nyaman digunakan, dan berorientasi pada hasil.",
+  title: "Scaleweb",
+  description:
+    "Website jasa pembuatan website yang berkesan, nyaman digunakan, dan berorientasi pada hasil.",
 };
 
 export default function RootLayout({

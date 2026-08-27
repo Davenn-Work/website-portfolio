@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import SplashClient from "@/lib/cores/features/splash/views/splash-client";
 
 export const metadata: Metadata = {
-  title: "Studio Digital",
+  title: "Scaleweb",
   description:
     "Website jasa pembuatan website yang berkesan, nyaman digunakan, dan berorientasi pada hasil.",
 };

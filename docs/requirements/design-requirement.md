@@ -98,7 +98,7 @@ Gunakan:
 - Animasi yang halus
 - Komposisi yang menarik
 
-Website harus terasa seperti **studio digital modern**, bukan template landing page generik.
+Website harus terasa seperti **Scaleweb modern**, bukan template landing page generik.
 
 ---
 

@@ -18,8 +18,8 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-30 border-b border-black/5 bg-[#fafafa]/90 backdrop-blur-xl">
-      <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
+    <header className="sticky top-0 z-30 border-b border-border/70 bg-background/90 backdrop-blur-xl">
+      <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <button
           type="button"
           onClick={() => {
@@ -27,8 +27,8 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
           }}
           className="flex items-center gap-2 text-left"
         >
-          <span className="h-2.5 w-2.5 rounded-full bg-[#635bff]" />
-          <span className="text-sm font-medium tracking-[-0.03em] text-[#111111] sm:text-base">
+          <span className="h-2.5 w-2.5 rounded-full bg-primary" />
+          <span className="text-sm font-medium tracking-tight text-foreground sm:text-base">
             {icons}
           </span>
         </button>
@@ -41,7 +41,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
               onClick={() => {
                 value.onClick?.();
               }}
-              className="rounded-full px-4 py-2 text-sm text-[#666666] transition-colors duration-200 hover:bg-black/[0.04] hover:text-[#111111]"
+              className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors duration-200 hover:bg-foreground/5 hover:text-foreground"
             >
               {value.text}
             </button>
@@ -51,7 +51,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
         <div className="flex items-center gap-2">
           <Button
             type="button"
-            className="hidden rounded-full bg-[#635bff] px-5 text-sm font-medium text-white shadow-none hover:bg-[#5346d8] md:inline-flex"
+            className="hidden rounded-full px-5 text-sm font-medium shadow-none md:inline-flex"
             onClick={() => {
               document.getElementById("kontak")?.scrollIntoView({ behavior: "smooth" });
             }}
@@ -63,7 +63,7 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
             type="button"
             variant="outline"
             size="icon-sm"
-            className="rounded-full border-black/10 bg-white md:hidden"
+            className="rounded-full border-border bg-card md:hidden"
             onClick={() => setIsOpen((value) => !value)}
             aria-expanded={isOpen}
             aria-label="Buka menu navigasi"
@@ -76,9 +76,9 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
       <div
         className={`md:hidden ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
-        } overflow-hidden border-t border-black/5 bg-[#fafafa] transition-all duration-300`}
+        } overflow-hidden border-t border-border bg-background transition-all duration-300`}
       >
-        <div className="mx-auto flex max-w-[1280px] flex-col gap-1 px-4 py-3 sm:px-6">
+        <div className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-3 sm:px-6">
           {navItems.map((value) => (
             <button
               key={value.text}
@@ -87,14 +87,14 @@ export default function Navbar({ icons, navItems }: NavbarTypes) {
                 value.onClick?.();
                 setIsOpen(false);
               }}
-              className="rounded-2xl px-4 py-3 text-left text-sm text-[#666666] transition-colors hover:bg-black/[0.04] hover:text-[#111111]"
+              className="rounded-2xl px-4 py-3 text-left text-sm text-muted-foreground transition-colors hover:bg-foreground/5 hover:text-foreground"
             >
               {value.text}
             </button>
           ))}
           <Button
             type="button"
-            className="mt-2 rounded-full bg-[#635bff] text-white hover:bg-[#5346d8]"
+            className="mt-2 rounded-full"
             onClick={() => {
               document.getElementById("kontak")?.scrollIntoView({ behavior: "smooth" });
               setIsOpen(false);
