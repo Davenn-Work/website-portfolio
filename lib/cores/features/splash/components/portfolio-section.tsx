@@ -11,14 +11,6 @@ export default function PortfolioSection() {
             <span className="block">Hasil yang</span>
             <span className="block">berbicara sendiri.</span>
           </h2>
-
-          <button
-            type="button"
-            className={`hidden ${textTheme.button2} text-brand-soft transition-colors hover:text-background md:inline-flex`}
-            onClick={() => document.getElementById("keahlian")?.scrollIntoView({ behavior: "smooth" })}
-          >
-            Lihat Semua Pekerjaan
-          </button>
         </div>
 
         <div className="mt-10 grid gap-6 lg:grid-cols-2">

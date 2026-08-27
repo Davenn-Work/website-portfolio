@@ -24,6 +24,7 @@ export type PortfolioCardData = {
   title: string;
   description: string;
   tone: "dark" | "light";
+  imageSrc: string;
 };
 
 export type ServiceCardData = {
@@ -73,14 +74,11 @@ export const valueCards: ValueCardData[] = [
 
 export const portfolioItems: PortfolioCardData[] = [
   {
-    title: "Platform Analitik SaaS",
-    description: "Desain arsitektur & pengembangan web",
+    title: "Vaulttech Document Management System",
+    description:
+      "Desain arsitektur & pengembangan web aplikasi manajemen dokumen",
     tone: "dark",
-  },
-  {
-    title: "E-Commerce Premium",
-    description: "Website bisnis & integrasi toko",
-    tone: "light",
+    imageSrc: "/images/jpg/prototype-mockup-1.png",
   },
 ];
 
@@ -152,26 +150,27 @@ export const processSteps: ProcessStepData[] = [
 
 export const pricingCards: PricingCardData[] = [
   {
-    name: "Esensial",
+    name: "Basic",
     description:
       "Cocok untuk startup dan bisnis kecil yang membutuhkan website profesional lebih cepat.",
-    price: "Mulai Rp 15 Jt",
+    price: "Mulai Rp 150 Rb",
     features: [
-      "Desain Landing Page",
-      "Pengembangan Frontend Dasar",
-      "Responsif Mobile",
+      "Jumlah halaman maks. 1",
+      "Durasi pengerjaan 3 hari",
+      "Jumlah Revisi 2 kali",
+      "Belum termasuk domain/ hosting website",
     ],
   },
   {
-    name: "Profesional",
+    name: "Professional",
     description:
-      "Solusi lengkap untuk perusahaan yang membutuhkan platform digital lebih komprehensif.",
-    price: "Mulai Rp 45 Jt",
+      "Solusi lengkap yang menawarkan platform digital lebih komprehensif.",
+    price: "Mulai Rp 450 Rb",
     features: [
-      "Full UX/UI Design System",
-      "Full-stack Web App Development",
-      "Integrasi CMS & API",
-      "3 Bulan Maintenance",
+      "Jumlah halaman maks. 4",
+      "Durasi pengerjaan 5 hari",
+      "Jumlah Revisi 3 kali",
+      "Sudah termasuk domain/ hosting website",
     ],
     featured: true,
     badge: "Populer",
